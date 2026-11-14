@@ -183,7 +183,7 @@
     W = hero.clientWidth; H = hero.clientHeight;
     canvas.width = W * DPR; canvas.height = H * DPR;
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    nodes = []; bonds = [];
+    nodes = []; bonds = []; pulses = []; // 重建时清空旧脉冲，避免索引越界
     var gap = W < 720 ? 96 : 110;
     var cols = Math.ceil(W / gap) + 2, rows = Math.ceil(H / gap) + 2;
     for (var ry = 0; ry < rows; ry++) {
@@ -241,6 +241,7 @@
       pu.p += 0.012;
       if (pu.p >= 1) { pulses.splice(i, 1); continue; }
       var pa = nodes[pu.b[0]], pb = nodes[pu.b[1]];
+      if (!pa || !pb) { pulses.splice(i, 1); continue; }
       var px = pa.x + (pb.x - pa.x) * pu.p, py = pa.y + (pb.y - pa.y) * pu.p;
       ctx.fillStyle = "rgba(" + pu.c + ",.9)";
       ctx.beginPath(); ctx.arc(px, py, 2.2, 0, 6.2832); ctx.fill();
