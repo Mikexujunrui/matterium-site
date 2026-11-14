@@ -147,39 +147,84 @@
           <span class="fact-desc">单个新材料课题实验室级的综合投入（美元级成本）</span>
         </div>
       </div>
-      <div class="paradigm" data-reveal>
-        <div class="paradigm-card paradigm-old">
-          <h3><span class="tag tag-warn">传统范式</span>三重瓶颈</h3>
-          <ul>
-            <li><b>专家经验</b>隐性知识，难以沉淀</li>
-            <li><b>计算模拟</b>精度、算力受限</li>
-            <li><b>实验试错</b>每天仅 1–2 次分析验证</li>
-          </ul>
+      <div class="era" data-reveal>
+        <div class="era-col era-old">
+          <h3>过去 · 为什么慢</h3>
+          <p>经验留在少数专家的脑子里，人走了，知识也跟着走了。</p>
+          <p>量子力学方法算不动真实尺度，经典方法又不够准，模拟卡在中间。</p>
+          <p>实验每天只能做 1–2 次分析，一个职业生涯大半在等结果。</p>
         </div>
-        <div class="paradigm-vs" aria-hidden="true">→</div>
-        <div class="paradigm-card paradigm-new">
-          <h3><span class="tag tag-info">AI 浪潮</span>转折已经发生</h3>
-          <ul>
-            <li><b>DeepMind</b>一次发现 220 万种新材料</li>
-            <li><b>A-Lab</b>17 天自主合成 36 种全新材料</li>
-            <li><b>政策牵引</b>“人工智能+”行动 · 创世纪计划</li>
-          </ul>
+        <div class="era-col era-new">
+          <h3>现在 · 什么变了</h3>
+          <p><span class="era-when">2023</span>DeepMind 一次预测出 220 万种新晶体结构，相当于人类 800 年的积累。</p>
+          <p><span class="era-when">2023</span>伯克利 A-Lab 连续 17 天无休，自主合成 36 种全新材料。</p>
+          <p><span class="era-when">2025</span>中国“人工智能+”行动与美国“创世纪计划”，都把材料研发写进了国家战略。</p>
         </div>
       </div>
-      <div class="industries" data-reveal>
-        <h3 class="ind-title">瓶颈集中在这些产业</h3>
-        <div class="ind-grid">
-          <div class="ind-card ind-gold"><b>固态电池与新能源</b><p>离子导率 &gt; 1 mS/cm、兼具空气稳定性与力学性能的固态电解质，仍在等待突破。</p></div>
-          <div class="ind-card ind-blue"><b>半导体与电子材料</b><p>下一代芯片的瓶颈，越来越集中在几类关键电子材料上。</p></div>
-          <div class="ind-card ind-mint"><b>航空航天与极端装备</b><p>耐受 1400℃+ 的轻质隔热瓦、抗中子辐照的聚变堆材料，需求明确而供给缓慢。</p></div>
-          <div class="ind-card ind-cyan"><b>清洁能源</b><p>低成本高效率的柔性光伏、常压高温超导——每一个都是产业级机会。</p></div>
+      <div class="bottlenecks" data-reveal>
+        <h3>瓶颈是具体的</h3>
+        <div class="bn-grid">
+          <p class="bn-item bn-gold"><b>固态电池</b>等一种离子导率 &gt; 1 mS/cm、在空气里稳定、力学性能也过关的固态电解质。</p>
+          <p class="bn-item bn-blue"><b>半导体材料</b>下一代芯片的性能上限，被几类关键电子材料压着。</p>
+          <p class="bn-item bn-mint"><b>航空航天与聚变</b>耐 1400℃+ 的隔热瓦、抗 100–200 dpa 中子辐照的结构材料，需求写了多年，供给还没跟上。</p>
+          <p class="bn-item bn-cyan"><b>光伏与超导</b>低成本柔性光伏、常压下 273K 以上的超导体，都还停在实验室阶段。</p>
         </div>
       </div>
-      <figure class="plate" data-reveal>
-        <img src="assets/img/strip-timeline.png" alt="1950–2026 年重大材料突破时间线：铌酸锂、碲化铋、铜氧化物、钕铁硼、磷酸铁锂" width="966" height="273" loading="lazy" decoding="async">
-        <figcaption>过去七十年，改变世界的材料屈指可数，每一种都花了十几年。如果研发速度本身可以被改变呢？</figcaption>
-      </figure>
     </div>
+  </div>
+  <div class="wrap tl-wrap">
+      <figure class="tl-figure" data-reveal>
+        <div class="tl-scroll">
+        <svg viewBox="0 0 1000 210" role="img" aria-label="1950 至 2026 年重大材料突破时间线：铌酸锂、碲化铋、铜氧化物、钕铁硼、磷酸铁锂，下一个尚未到来">
+          <line class="tl-axis" x1="40" y1="150" x2="946" y2="150"/>
+          <path class="tl-arrow" d="M950,150 l-12,-5.5 M950,150 l-12,5.5"/>
+          <g class="tl-m" style="animation-delay:.15s">
+            <line class="tl-stem" x1="70" y1="86" x2="70" y2="150"/>
+            <circle class="tl-dot tl-dot-gold" cx="70" cy="150" r="5.5"/>
+            <text class="tl-name" x="70" y="62" text-anchor="middle">光电材料</text>
+            <text class="tl-formula" x="70" y="80" text-anchor="middle">LiNbO₃</text>
+            <text class="tl-year" x="70" y="176" text-anchor="middle">1950</text>
+          </g>
+          <g class="tl-m" style="animation-delay:.3s">
+            <line class="tl-stem" x1="150" y1="126" x2="150" y2="150"/>
+            <circle class="tl-dot tl-dot-blue" cx="150" cy="150" r="5.5"/>
+            <text class="tl-name" x="150" y="102" text-anchor="middle">热电材料</text>
+            <text class="tl-formula" x="150" y="120" text-anchor="middle">Bi₂Te₃</text>
+            <text class="tl-year" x="150" y="176" text-anchor="middle">1950</text>
+          </g>
+          <g class="tl-m" style="animation-delay:.45s">
+            <line class="tl-stem" x1="430" y1="86" x2="430" y2="150"/>
+            <circle class="tl-dot tl-dot-mint" cx="430" cy="150" r="5.5"/>
+            <text class="tl-name" x="430" y="62" text-anchor="middle">高温超导</text>
+            <text class="tl-formula" x="430" y="80" text-anchor="middle">La₂CuO₄</text>
+            <text class="tl-year" x="430" y="176" text-anchor="middle">1986</text>
+          </g>
+          <g class="tl-m" style="animation-delay:.6s">
+            <line class="tl-stem" x1="510" y1="126" x2="510" y2="150"/>
+            <circle class="tl-dot tl-dot-cyan" cx="510" cy="150" r="5.5"/>
+            <text class="tl-name" x="510" y="102" text-anchor="middle">永磁材料</text>
+            <text class="tl-formula" x="510" y="120" text-anchor="middle">Nd₂Fe₁₄B</text>
+            <text class="tl-year" x="510" y="176" text-anchor="middle">1986</text>
+          </g>
+          <g class="tl-m" style="animation-delay:.75s">
+            <line class="tl-stem" x1="600" y1="86" x2="600" y2="150"/>
+            <circle class="tl-dot tl-dot-gold" cx="600" cy="150" r="5.5"/>
+            <text class="tl-name" x="600" y="62" text-anchor="middle">锂电池</text>
+            <text class="tl-formula" x="600" y="80" text-anchor="middle">LiFePO₄</text>
+            <text class="tl-year" x="600" y="176" text-anchor="middle">1996</text>
+          </g>
+          <g class="tl-m" style="animation-delay:.95s">
+            <line class="tl-stem tl-stem-gold" x1="940" y1="116" x2="940" y2="150"/>
+            <circle class="tl-dot tl-dot-ink" cx="940" cy="150" r="5.5"/>
+            <rect class="tl-callout" x="855" y="64" width="140" height="52" rx="8"/>
+            <text class="tl-callout-text" x="925" y="86" text-anchor="middle">下一个，</text>
+            <text class="tl-callout-text" x="925" y="104" text-anchor="middle">还没有来</text>
+            <text class="tl-year" x="940" y="176" text-anchor="middle">2026</text>
+          </g>
+        </svg>
+        </div>
+        <figcaption>前面五种，每一种都花了十到二十年。我们想让下一个快一点。</figcaption>
+      </figure>
   </div>
 </section>
 
