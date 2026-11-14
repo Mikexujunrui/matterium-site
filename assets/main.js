@@ -228,12 +228,12 @@
     ctx.lineWidth = 1;
     for (i = 0; i < bonds.length; i++) {
       var a = nodes[bonds[i][0]], b = nodes[bonds[i][1]];
-      ctx.strokeStyle = "rgba(53,196,255," + (0.05 + 0.05 * Math.sin(t + i)).toFixed(3) + ")";
+      ctx.strokeStyle = "rgba(53,196,255," + (0.028 + 0.028 * Math.sin(t + i)).toFixed(3) + ")";
       ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
     }
     for (i = 0; i < nodes.length; i++) {
       n = nodes[i];
-      ctx.fillStyle = "rgba(" + n.c + "," + (0.35 + 0.3 * n.depth).toFixed(2) + ")";
+      ctx.fillStyle = "rgba(" + n.c + "," + (0.16 + 0.2 * n.depth).toFixed(2) + ")";
       ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, 6.2832); ctx.fill();
     }
     for (i = pulses.length - 1; i >= 0; i--) {
