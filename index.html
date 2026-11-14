@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>质元科技 Matterium — 从理解物质，到创造未来</title>
+<meta name="description" content="质元科技 Matterium：以读·算·做三重智能重构材料研发范式。源自中国科学技术大学与苏州国家实验室的全栈 AI+材料团队。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,3 28,10 28,22 16,29 4,22 4,10' fill='none' stroke='%2335c4ff' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23e8a33d'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ================= 入口仪式：动态 logo，点击/滚动展开 ================= -->
+<div class="gate" id="gate" role="button" tabindex="0" aria-label="点击进入质元科技">
+  <div class="gate-bg" aria-hidden="true"></div>
+  <div class="gate-center">
+    <svg class="gate-mark" viewBox="0 0 548 505" aria-hidden="true">
+      <defs>
+        <linearGradient id="gmGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#79d1f4"/>
+          <stop offset=".5" stop-color="#429ce8"/>
+          <stop offset="1" stop-color="#2476ce"/>
+        </linearGradient>
+      </defs>
+      <path class="gm-draw gm-hexpath" pathLength="1" d="M265,62 L415,152 L415,322 L265,432 L112,322 L112,152 Z"/>
+      <path class="gm-draw gm-m" pathLength="1" d="M196,310 L196,200 L300,268 L400,200 L400,310"/>
+      <g class="gm-nodes">
+        <circle class="gm-node" style="animation-delay:.55s" cx="265" cy="62" r="20"/>
+        <circle class="gm-node" style="animation-delay:.7s" cx="415" cy="152" r="20"/>
+        <circle class="gm-node" style="animation-delay:.85s" cx="415" cy="322" r="20"/>
+        <circle class="gm-node" style="animation-delay:1s" cx="265" cy="432" r="20"/>
+        <circle class="gm-node" style="animation-delay:1.15s" cx="112" cy="322" r="20"/>
+        <circle class="gm-node" style="animation-delay:1.3s" cx="112" cy="152" r="20"/>
+        <circle class="gm-node gm-node-m" style="animation-delay:1.9s" cx="196" cy="200" r="16"/>
+        <circle class="gm-node gm-node-m" style="animation-delay:2s" cx="196" cy="310" r="16"/>
+      </g>
+    </svg>
+    <p class="gate-word">质元科技<span>MATTERIUM</span></p>
+    <p class="gate-slogan">从理解物质，到创造未来</p>
+  </div>
+  <p class="gate-hint">点击或滑动</p>
+  <button class="gate-skip" type="button">跳过 →</button>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ================= 顶栏 ================= -->
+<header class="topbar" id="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top" aria-label="质元科技 首页">
+      <img class="brand-logo" src="assets/logo-light.png" alt="">
+      <span class="brand-txt">质元科技<i>MATTERIUM</i></span>
+    </a>
+    <nav class="topnav" id="topnav" aria-label="主导航">
+      <a href="#why" data-spy>为什么是现在</a>
+      <a href="#answer" data-spy>技术路线</a>
+      <a href="#product" data-spy>产品形态</a>
+      <a href="#facts" data-spy>进展</a>
+      <a href="#about" data-spy>关于我们</a>
+      <a href="#contact" data-spy>联系</a>
+      <a class="topnav-cta" href="#service">线上服务<span class="cta-dot" aria-hidden="true"></span></a>
+    </nav>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="topnav" aria-label="打开菜单">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= 首屏 ================= -->
+<section class="hero" id="top">
+  <canvas id="lattice" aria-hidden="true"></canvas>
+  <div class="hero-aurora" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker" data-entrance="1"><span class="kicker-line"></span>苏州质元科技有限公司 · MATTERIUM</p>
+      <h1 data-entrance="2">从理解物质，<br><em>到创造未来。</em></h1>
+      <p class="hero-lede" data-entrance="3">
+        固态电池、超导、下一代芯片——这场产业变革的瓶颈，都指向材料。
+        而一种新材料从实验室走到产线，平均要等 <strong>10–20 年</strong>。
+        我们把读文献、算结构、做实验交给同一个 AI 科学家，把这个等待当作一个可以被压缩的工程问题。
+      </p>
+      <div class="hero-btns" data-entrance="4">
+        <a class="btn btn-solid" href="#service">进入线上服务<span class="btn-arrow">→</span></a>
+        <a class="btn btn-line" href="#why">了解技术路线<span class="btn-arrow">↓</span></a>
+      </div>
+      <p class="hero-note" data-entrance="5"><span class="pulse-dot"></span>线上服务正与首批合作伙伴验证 · 面向科研团队与企业</p>
+    </div>
+
+    <figure class="mc-panel" data-entrance="6" aria-label="MatCreator · AI 材料科学家">
+      <div class="mc-head">
+        <span>MATCREATOR · AI MATERIALS SCIENTIST</span>
+        <span class="inst-live"><span class="pulse-dot pulse-dot-mint"></span>运行中</span>
+      </div>
+      <div class="mc-body">
+        <div class="mc-mark" aria-hidden="true">
+          <span class="mc-ring"></span>
+          <img src="assets/img/mc-logo.png" alt="" width="548" height="505">
+        </div>
+        <h2 class="mc-name">MatCreator</h2>
+        <p class="mc-tag">AI 材料科学家</p>
+        <p class="mc-lede">把查文献、做计算、进实验，交给同一个智能体。</p>
+        <div class="mc-chips">
+          <span>50+ 科研用户</span><span>数千条专家轨迹</span><span>XRD / SEM 解析</span>
+        </div>
+      </div>
+      <figcaption class="mc-foot">
+        <a href="#product">看看它如何工作<span class="btn-arrow">→</span></a>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="hero-scrollhint" aria-hidden="true"><span></span>SCROLL</div>
+</section>
+
+<!-- ================= 跑马灯 ================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>读文献</span><i>◆</i><span>算结构</span><i>◆</i><span>做实验</span><i>◆</i><span>数据飞轮</span><i>◆</i><span>跨尺度物质基座</span><i>◆</i><span>AI + 材料</span><i>◆</i>
+    <span>读文献</span><i>◆</i><span>算结构</span><i>◆</i><span>做实验</span><i>◆</i><span>数据飞轮</span><i>◆</i><span>跨尺度物质基座</span><i>◆</i><span>AI + 材料</span><i>◆</i>
+  </div>
+</div>
+
+<!-- ================= 01 为什么是现在 ================= -->
+<section class="sect sect-why" id="why">
+  <div class="wrap sect-grid">
+    <div class="sect-side" data-reveal>
+      <span class="sect-no">01</span>
+      <h2>为什么是现在</h2>
+      <p class="side-note">每一次产业革命都始于一种新材料。而今天，研发速度远远跟不上需求。</p>
+    </div>
+    <div class="sect-main">
+      <p class="lead" data-reveal>
+        新能源、半导体、高端装备，都卡在几类关键材料上。
+        <strong>旧的研究范式已经严重限制了材料领域乃至人类科技的进步速度</strong>——
+        一次重大突破，往往要消耗一代研究者的职业生涯。
+      </p>
+      <div class="fact-rows">
+        <div class="fact-row" data-reveal>
+          <span class="fact-num"><b data-count="20" data-prefix="10–">10–20</b> 年</span>
+          <span class="fact-desc">新材料从实验室合成到工业化生产的平均周期</span>
+        </div>
+        <div class="fact-row" data-reveal>
+          <span class="fact-num"><b data-count="55">0</b>%</span>
+          <span class="fact-desc">实验数据非结构化、难以解释，研究者难以复现彼此的结果</span>
+        </div>
+        <div class="fact-row" data-reveal>
+          <span class="fact-num"><b data-count="2000">0</b> 万+</span>
+          <span class="fact-desc">单个新材料课题实验室级的综合投入（美元级成本）</span>
+        </div>
+      </div>
+      <div class="paradigm" data-reveal>
+        <div class="paradigm-card paradigm-old">
+          <h3><span class="tag tag-warn">传统范式</span>三重瓶颈</h3>
+          <ul>
+            <li><b>专家经验</b>隐性知识，难以沉淀</li>
+            <li><b>计算模拟</b>精度、算力受限</li>
+            <li><b>实验试错</b>每天仅 1–2 次分析验证</li>
+          </ul>
+        </div>
+        <div class="paradigm-vs" aria-hidden="true">→</div>
+        <div class="paradigm-card paradigm-new">
+          <h3><span class="tag tag-info">AI 浪潮</span>转折已经发生</h3>
+          <ul>
+            <li><b>DeepMind</b>一次发现 220 万种新材料</li>
+            <li><b>A-Lab</b>17 天自主合成 36 种全新材料</li>
+            <li><b>政策牵引</b>“人工智能+”行动 · 创世纪计划</li>
+          </ul>
+        </div>
+      </div>
+      <div class="industries" data-reveal>
+        <h3 class="ind-title">瓶颈集中在这些产业</h3>
+        <div class="ind-grid">
+          <div class="ind-card ind-gold"><b>固态电池与新能源</b><p>离子导率 &gt; 1 mS/cm、兼具空气稳定性与力学性能的固态电解质，仍在等待突破。</p></div>
+          <div class="ind-card ind-blue"><b>半导体与电子材料</b><p>下一代芯片的瓶颈，越来越集中在几类关键电子材料上。</p></div>
+          <div class="ind-card ind-mint"><b>航空航天与极端装备</b><p>耐受 1400℃+ 的轻质隔热瓦、抗中子辐照的聚变堆材料，需求明确而供给缓慢。</p></div>
+          <div class="ind-card ind-cyan"><b>清洁能源</b><p>低成本高效率的柔性光伏、常压高温超导——每一个都是产业级机会。</p></div>
+        </div>
+      </div>
+      <figure class="plate" data-reveal>
+        <img src="assets/img/strip-timeline.png" alt="1950–2026 年重大材料突破时间线：铌酸锂、碲化铋、铜氧化物、钕铁硼、磷酸铁锂" width="966" height="273" loading="lazy" decoding="async">
+        <figcaption>过去七十年，改变世界的材料屈指可数，每一种都花了十几年。如果研发速度本身可以被改变呢？</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 技术路线 读·算·做 ================= -->
+<section class="sect sect-answer" id="answer">
+  <div class="wrap sect-grid">
+    <div class="sect-side" data-reveal>
+      <span class="sect-no">02</span>
+      <h2>技术路线：<br>读 · 算 · 做</h2>
+      <p class="side-note">一个材料问题，要经历查文献、做计算、进实验三轮循环。我们把三轮循环接成一条流水线：上一轮的结果，直接成为下一轮的输入。</p>
+      <div class="loop-glyph" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="44" class="loop-ring"/>
+          <circle cx="60" cy="16" r="6" class="loop-n loop-n-gold"/>
+          <circle cx="98" cy="82" r="6" class="loop-n loop-n-blue"/>
+          <circle cx="22" cy="82" r="6" class="loop-n loop-n-mint"/>
+          <circle cx="60" cy="60" r="4" class="loop-core"/>
+        </svg>
+      </div>
+    </div>
+    <div class="sect-main lanes">
+      <article class="lane lane-read" data-reveal>
+        <div class="lane-glyph"><span>读</span><small>READ</small></div>
+        <div class="lane-body">
+          <h3>知识智能<span class="lane-chip lane-chip-gold">文献 · 专利 · 实验记录</span></h3>
+          <p>
+            企业最值钱的经验，往往躺在网盘里的 Excel、纸质图表和报告 PDF 中。
+            知识智能把这些非结构化记录解析成可检索、可计算的材料知识，
+            <strong>让每一次新实验，都站在全部历史数据之上。</strong>
+          </p>
+        </div>
+        <div class="lane-viz">
+          <img src="assets/img/ill-read.png" alt="" width="836" height="381" loading="lazy" decoding="async">
+        </div>
+      </article>
+
+      <article class="lane lane-calc" data-reveal>
+        <div class="lane-glyph"><span>算</span><small>COMPUTE</small></div>
+        <div class="lane-body">
+          <h3>物理智能<span class="lane-chip lane-chip-blue">EAC-Net · PFD 力场</span></h3>
+          <p>
+            自研电荷密度大模型（EAC-Net）与原子尺度微调力场（PFD），
+            把物理规律写进模型内部，让语言模型真正“看见”微观原子世界。
+            表界面等复杂体系的模拟效率提升 1–2 个量级，<strong>筛选结果经得起实验复核。</strong>
+          </p>
+        </div>
+        <div class="lane-viz">
+          <img src="assets/img/ill-compute.png" alt="" width="763" height="381" loading="lazy" decoding="async">
+        </div>
+      </article>
+
+      <article class="lane lane-do" data-reveal>
+        <div class="lane-glyph"><span>做</span><small>EXPERIMENT</small></div>
+        <div class="lane-body">
+          <h3>实验智能<span class="lane-chip lane-chip-mint">MatCreator · XRD / SEM</span></h3>
+          <p>
+            AI 材料科学家 MatCreator 沉淀了数千条专家真实科研轨迹，
+            能生成实验方案、解析 XRD 与 SEM 谱图。每一轮实验的结果都自动回流数据库，
+            <strong>用得越多，算得越准。</strong>
+          </p>
+        </div>
+        <div class="lane-viz">
+          <img src="assets/img/ill-do.png" alt="" width="763" height="347" loading="lazy" decoding="async">
+        </div>
+      </article>
+
+      <figure class="plate" data-reveal>
+        <img src="assets/img/diagram-loop.png" alt="MatCreator 三重智能闭环官方图：知识智能 × 原子尺度物理 AI × 实验智能" width="1399" height="871" loading="lazy" decoding="async">
+        <figcaption>MatCreator：知识、物理、实验三种智能，围绕同一个材料问题协作。</figcaption>
+      </figure>
+      <figure class="flywheel-fig" data-reveal>
+        <img src="assets/img/flywheel.png" alt="实验结果反哺 · 持续迭代进化：更新知识库、优化模型、提出新假设" width="1146" height="283" loading="lazy" decoding="async">
+      </figure>
+      <div class="base-band" data-reveal>
+        <span class="base-title">核心引擎 · 跨尺度微观物质基座</span>
+        <span class="base-item">原子与晶体结构</span>
+        <span class="base-item">电子结构与化学键</span>
+        <span class="base-item">热力学与动力学</span>
+      </div>
+      <figure class="plate" data-reveal>
+        <img src="assets/img/diagram-engine.jpg" alt="跨尺度物质基座官方架构：多模态 AtomWorld、原子尺度 PFD 微调力场、电子层级 EAC-Net 电荷密度大模型，汇入 AI-ready 材料数据库" width="2812" height="1596" loading="lazy" decoding="async">
+        <figcaption>所有计算与实验数据，最终汇入同一个持续进化的物质基座。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 产品形态 ================= -->
+<section class="sect sect-product" id="product">
+  <div class="wrap sect-grid">
+    <div class="sect-side" data-reveal>
+      <span class="sect-no">03</span>
+      <h2>产品形态</h2>
+      <p class="side-note">点击放大，看看 AI 材料科学家日常在做什么。</p>
+    </div>
+    <div class="sect-main">
+      <div class="gallery">
+        <figure class="g-card g-wide" data-reveal data-lightbox="0" tabindex="0" role="button" aria-label="放大查看画布协作">
+          <img src="assets/img/shot-canvas.png" alt="open-agent-world 画布：MatCreator 研究军团、知识图谱与执行器空间" width="2184" height="968" loading="lazy" decoding="async">
+          <figcaption><b>画布协作</b>MatCreator 研究军团 · 知识图谱</figcaption>
+          <span class="g-zoom" aria-hidden="true">⤢</span>
+        </figure>
+        <figure class="g-card" data-reveal data-lightbox="1" tabindex="0" role="button" aria-label="放大查看 Pack 与卡片库">
+          <img src="assets/img/shot-library.png" alt="Pack 与卡片库：插件化能力包市场" width="1680" height="1112" loading="lazy" decoding="async">
+          <figcaption><b>Pack &amp; Card Library</b>插件化能力包</figcaption>
+          <span class="g-zoom" aria-hidden="true">⤢</span>
+        </figure>
+        <figure class="g-card" data-reveal data-lightbox="2" tabindex="0" role="button" aria-label="放大查看晶体 explorer">
+          <img src="assets/img/shot-structure.png" alt="晶体 explorer：硅晶体的原子尺度可视化" width="1600" height="1000" loading="lazy" decoding="async">
+          <figcaption><b>Crystal Explorer</b>原子尺度结构可视化</figcaption>
+          <span class="g-zoom" aria-hidden="true">⤢</span>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 进展 ================= -->
+<section class="sect sect-facts" id="facts">
+  <div class="wrap sect-grid">
+    <div class="sect-side" data-reveal>
+      <span class="sect-no sect-no-light">04</span>
+      <h2>进展</h2>
+    </div>
+    <div class="sect-main">
+      <div class="stat-strip">
+        <div class="stat" data-reveal><b><span data-count="110">0</span>+</b><span>Science / Nature 等顶刊论文</span></div>
+        <div class="stat" data-reveal><b><span data-count="5000">0</span> 万+</b><span>国家级科研项目累计经费（元）</span></div>
+        <div class="stat" data-reveal><b><span data-count="50">0</span>+</b><span>MatCreator 科研用户</span></div>
+      </div>
+      <div class="timeline" id="timeline">
+        <div class="tl-line" aria-hidden="true"><span id="tl-progress"></span></div>
+        <div class="tl-row" data-reveal>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-when">学术根基</span>
+          <p>团队源自中国科学技术大学苏州高等研究院与苏州国家实验室，十余年“AI + 材料”积累，核心技术自主可控。</p>
+        </div>
+        <div class="tl-row" data-reveal>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-when">平台成型</span>
+          <p>插件式智能体框架 open-agent-world 上线：智能体、工具与数据在同一张画布上协作，MatCreator 走进科研一线。</p>
+        </div>
+        <div class="tl-row" data-reveal>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-when">产业验证</span>
+          <p>与头部固态电池材料企业完成 POC：知识沉淀、候选筛选、XRD/SEM 解析三类场景落地，潜在合同价值 100 万元/年。</p>
+        </div>
+        <div class="tl-row tl-row-next" data-reveal>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-when">线上开放</span>
+          <p>智能研发工作台筹备中——企业知识库、在线材料计算与智能解析服务将逐步开放。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 关于我们 ================= -->
+<section class="sect sect-about" id="about">
+  <div class="wrap sect-grid">
+    <div class="sect-side" data-reveal>
+      <span class="sect-no">05</span>
+      <h2>关于我们</h2>
+      <p class="side-note">源自中科大与苏州国家实验室，十余年「AI + 材料」积累，核心技术自主可控。</p>
+    </div>
+    <div class="sect-main">
+      <p class="lead" data-reveal>质元科技是一支横跨材料物理、AI 算法与算力工程的全栈团队。我们把实验室里的方法论，做成科研团队与企业可以直接使用的研发系统。</p>
+      <div class="team">
+        <h3 class="team-title" data-reveal>核心团队<span>国内极少数全栈 “AI + 材料” 团队</span></h3>
+        <div class="team-grid">
+          <div class="team-card" data-reveal>
+            <img src="assets/img/team-zhong.png" alt="钟志诚肖像" width="403" height="413" loading="lazy" decoding="async">
+            <b>钟志诚</b><span class="team-role">首席科学家</span>
+            <p>中科大长聘正教授、苏州国家实验室双聘研究员；Science / Nature 等顶刊论文 110+。</p>
+          </div>
+          <div class="team-card" data-reveal>
+            <img src="assets/img/team-wang.png" alt="王若宇肖像" width="399" height="475" loading="lazy" decoding="async">
+            <b>王若宇</b><span class="team-role">CEO</span>
+            <p>MatCreator 核心开发；苏州国家实验室副研究员，主持国自然青年基金。</p>
+          </div>
+          <div class="team-card" data-reveal>
+            <img src="assets/img/team-zeng.png" alt="曾有成肖像" width="268" height="324" loading="lazy" decoding="async">
+            <b>曾有成</b><span class="team-role">COO</span>
+            <p>连续创业者，深耕半导体制造；主导长江存储等头部企业 AI 平台交付。</p>
+          </div>
+          <div class="team-card" data-reveal>
+            <img src="assets/img/team-zhang.png" alt="张干肖像" width="382" height="475" loading="lazy" decoding="async">
+            <b>张干</b><span class="team-role">CPO</span>
+            <p>与新加坡国立大学、多伦多大学、洛桑联邦理工等共建智能实验平台。</p>
+          </div>
+        </div>
+      </div>
+      <div class="network" data-reveal>
+        <h3 class="team-title">科研与产业网络</h3>
+        <div class="net-row">
+          <span>中国科学技术大学苏州高等研究院</span>
+          <span>苏州国家实验室</span>
+          <span>新加坡国立大学</span>
+          <span>多伦多大学</span>
+          <span>洛桑联邦理工</span>
+          <span>头部固态电池材料企业</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06 线上服务 ================= -->
+<section class="service" id="service">
+  <div class="service-glow" aria-hidden="true"></div>
+  <div class="wrap service-grid">
+    <div class="service-copy" data-reveal>
+      <span class="sect-no sect-no-light">06</span>
+      <h2>线上服务 · 即将开放</h2>
+      <p>
+        企业知识库、在线材料计算与智能解析正在阿里云上部署，首批合作伙伴已经在用。
+        服务正式开放后，入口会放在这里。
+      </p>
+      <div class="service-modules">
+        <span class="mod-chip"><i class="mod-dot mod-dot-gold"></i>企业研发知识库</span>
+        <span class="mod-chip"><i class="mod-dot mod-dot-blue"></i>MatCreator 在线计算</span>
+        <span class="mod-chip"><i class="mod-dot mod-dot-mint"></i>AI-ready 材料数据库</span>
+      </div>
+    </div>
+    <div class="service-actions" data-reveal>
+      <!-- ⭐ 上线时：href 替换为实际服务地址；去掉 aria-disabled 与 徽章 -->
+      <a class="btn btn-solid btn-solid-disabled" id="service-url" href="#" aria-disabled="true">
+        进入线上服务 <span class="badge">即将开放</span>
+      </a>
+      <button class="btn btn-ghost-light" id="early-access-btn" data-open-early type="button">申请早期体验</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 07 联系 ================= -->
+<section class="sect sect-contact" id="contact">
+  <div class="wrap sect-grid">
+    <div class="sect-side" data-reveal>
+      <span class="sect-no">07</span>
+      <h2>联系</h2>
+      <p class="side-note">如果你手里有一批“算不动、理不清”的材料数据，欢迎聊聊。</p>
+    </div>
+    <div class="sect-main contact-cols">
+      <div class="contact-card" data-reveal>
+        <h3>研究合作</h3>
+        <p>欢迎科研团队把真实课题带进来，一起验证智能体工作流。</p>
+        <!-- TODO: 替换为实际邮箱 -->
+        <div class="contact-line">
+          <a href="mailto:research@matterium.cn">research@matterium.cn</a>
+          <button class="copy-btn" type="button" data-copy="research@matterium.cn" aria-label="复制研究合作邮箱">复制</button>
+        </div>
+      </div>
+      <div class="contact-card" data-reveal>
+        <h3>企业合作</h3>
+        <p>非标数据导入、谱学解析、候选筛选——从一次小范围 POC 开始。</p>
+        <!-- TODO: 替换为实际邮箱 -->
+        <div class="contact-line">
+          <a href="mailto:partner@matterium.cn">partner@matterium.cn</a>
+          <button class="copy-btn" type="button" data-copy="partner@matterium.cn" aria-label="复制企业合作邮箱">复制</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 收尾 CTA ================= -->
+<section class="closing">
+  <div class="wrap closing-in" data-reveal>
+    <p class="closing-line">把你的材料问题，带进这条工作流。</p>
+    <button class="btn btn-solid" data-open-early type="button">申请早期体验<span class="btn-arrow">→</span></button>
+  </div>
+</section>
+
+<!-- ================= 页脚 ================= -->
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div class="footer-brand">
+      <img src="assets/logo-light.png" alt="" class="footer-logo">
+      <div>
+        <p class="footer-name">质元科技 <i>MATTERIUM</i></p>
+        <p class="footer-slogan">从理解物质，到创造未来</p>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p>苏州质元科技有限公司 · 江苏省苏州工业园区</p>
+      <p class="footer-legal">
+        <!-- ⭐ 备案下来后替换 -->
+        <span>苏ICP备XXXXXXXX号</span> ·
+        <span>公安备案XXXXXXXXXXXXX号</span> ·
+        © 2026 Matterium
+      </p>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" type="button" aria-label="回到顶部">↑</button>
+
+<!-- ================= 浮动联系 ================= -->
+<div class="fab-wrap">
+  <div class="fab-pop" id="fab-pop" hidden>
+    <p class="fab-title">联系我们</p>
+    <div class="fab-line"><span>研究合作</span><a href="mailto:research@matterium.cn">research@matterium.cn</a><button class="copy-btn" type="button" data-copy="research@matterium.cn" aria-label="复制研究合作邮箱">复制</button></div>
+    <div class="fab-line"><span>企业合作</span><a href="mailto:partner@matterium.cn">partner@matterium.cn</a><button class="copy-btn" type="button" data-copy="partner@matterium.cn" aria-label="复制企业合作邮箱">复制</button></div>
+    <button class="btn btn-solid btn-block" data-open-early type="button">申请早期体验</button>
+  </div>
+  <button class="fab" id="fab" type="button" aria-expanded="false" aria-controls="fab-pop" aria-label="联系我们">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3,5.5 h18 v13 h-18 z M3,6 l9,7 l9,-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+<!-- ================= 早期体验弹窗 ================= -->
+<div class="modal" id="early-modal" role="dialog" aria-modal="true" aria-labelledby="early-title" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-x" type="button" data-close aria-label="关闭">×</button>
+    <div class="modal-form-view" id="early-form-view">
+      <span class="modal-kicker">EARLY ACCESS</span>
+      <h3 id="early-title">申请早期体验</h3>
+      <p class="modal-lede">线上服务开放时，我们会第一时间通知你。首批名额面向科研团队与企业研发部门。</p>
+      <form id="early-form" novalidate>
+        <label>姓名<input name="name" type="text" autocomplete="name" required placeholder="怎么称呼你"></label>
+        <label>邮箱<input name="email" type="email" autocomplete="email" required placeholder="name@lab.edu.cn"></label>
+        <label>机构<input name="org" type="text" autocomplete="organization" placeholder="高校 / 实验室 / 企业（选填）"></label>
+        <label>感兴趣的方向
+          <select name="interest">
+            <option value="kb">企业研发知识库</option>
+            <option value="calc">MatCreator 在线计算</option>
+            <option value="parse">XRD / SEM 智能解析</option>
+            <option value="all">全部都想要</option>
+          </select>
+        </label>
+        <p class="form-err" id="form-err" role="alert" hidden></p>
+        <button class="btn btn-solid btn-block" type="submit">提交申请<span class="btn-arrow">→</span></button>
+      </form>
+    </div>
+    <div class="modal-success-view" id="early-success-view" hidden>
+      <div class="success-ring" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" class="sr-circle"/><path d="M20,33 L29,42 L45,24" class="sr-check"/></svg>
+      </div>
+      <h3>已收到你的申请</h3>
+      <p class="modal-lede" id="success-msg">服务开放时，通知将发送到你的邮箱。</p>
+      <button class="btn btn-line btn-block" type="button" data-close>好的</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 图片灯箱 ================= -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片放大查看" hidden>
+  <div class="lb-backdrop" data-lb-close></div>
+  <button class="lb-x" type="button" data-lb-close aria-label="关闭">×</button>
+  <button class="lb-prev" type="button" aria-label="上一张">←</button>
+  <figure class="lb-stage">
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <button class="lb-next" type="button" aria-label="下一张">→</button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
